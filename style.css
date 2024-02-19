@@ -1,0 +1,10 @@
+@keyframes Zoomo {
+    from {visibility: hidden;}
+    to {visibility: visible;}
+}
+#aniZoom {
+    animation: Zoomo;  
+    animation-duration: 5s;
+    /* animation-timing-function: ease-in; */ 
+}
+

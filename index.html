@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <title>Project Pilot</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./Pilot png.png" type="image/x-icon">
+
+
+
+</head>
+
+
+<body>
+
+
+    <header class="text-black-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <nav class="flex lg:w-2/5 flex-wrap items-center text-base md:ml-auto">
+                <style>
+                    body {
+                        margin: 40%;
+                        background-color: orange;
+                    }
+                </style>
+                <a href="/" class="mr-5 hover:text-gray-900">HOME</a>
+                <a href="/" class="mr-5 hover:text-gray-900">ABOUT</a>
+                <a href="/" class="mr-5 hover:text-gray-900">CONTACT</a>
+                <a href="/" class="hover:text-gray-900">SUBJECTS</a>
+            </nav>
+            <a
+                class="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-gray-900 lg:items-center lg:justify-center mb-4 md:mb-0">
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
+                    viewBox="0 0 24 24">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                </svg> -->
+
+                <img src="/logo.jpg" alt="logo" style="width: 10vh; height:auto;">
+                <span class="ml-3 text-xl">Project Pilot</span>
+            </a>
+            <div class="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
+                <button
+                    class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Login
+                    now
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+    <hr>
+    <section class="text-gray-600 body-font">
+        <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+            <div
+                class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+                <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">“Education is one thing no
+                    one can take away from you.” ...
+                    <br class="hidden lg:inline-block">
+                </h1>
+                <p class="mb-8 leading-relaxed">I don't know anyone who has got to the top without hard work.</p>
+                <div class="flex justify-center">
+                    <button
+                        class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Let's
+                        start</button>
+
+                </div>
+            </div>
+            <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+                <img class="animate-pulse object-center rounded " alt="hero" src="./Group-44.png">
+            </div>
+    </section>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: whitesmoke;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: black;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+    </head>
+
+    <body>
+
+        <form action="submit_assignment.php" method="post" enctype="multipart/form-data">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="contact">Contact Number:</label>
+            <input type="tel" id="contact" name="contact" required>
+
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="file">File Upload:</label>
+            <input type="file" id="file" name="file" accept=".pdf, .doc, .docx" required>
+
+            <label for="assignmentDescription">Write Assignment Description:</label>
+            <textarea id="assignmentDescription" name="assignmentDescription" rows="4" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <section class="text-gray-600 body-font">
+            <div class="container px-5 py-24 mx-auto">
+                <div class="flex flex-wrap w-full mb-20">
+                    <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+                        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Pitchfork Kickstarter
+                            Taxidermy</h1>
+                        <div class="h-1 w-20 bg-indigo-500 rounded"></div>
+                    </div>
+                    <p class="lg:w-1/2 w-full leading-relaxed text-gray-500">Read the assignment carefully as soon as
+                        you
+                        receive it.
+                        Do not put this task off—reading the assignment at the beginning will save you time, stress, and
+                        problems later.
+                        An assignment can look pretty straightforward at first, particularly if the instructor has
+                        provided
+                        lots of information.
+                        That does not mean it will not take time and effort to complete; you may even have to learn a
+                        new
+                        skill to complete the assignment.</p>
+                </div>
+                <div class="flex flex-wrap -m-4">
+                    <div class="xl:w-1/4 md:w-1/2 p-4">
+                        <div class="bg-gray-100 p-6 rounded-lg">
+                            <img class="animate-bounce rounded w-full object-cover object-center mb-6" src="./th.jpeg"
+                                alt="content">
+                            <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font"></h3>
+                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Tell us what you need</h2>
+                            <p class="leading-relaxed text-base">Visit our website and provide all the details by
+                                filling up
+                                the place order form. If you want customized assignment solutions, you can talk to our
+                                support team and mention your requirements.</p>
+                        </div>
+                    </div>
+                    <div class="xl:w-1/4 md:w-1/2 p-4">
+                        <div class="bg-gray-100 p-6 rounded-lg">
+                            <img class="animate-bounce h-40 rounded w-full object-cover object-center mb-6"
+                                src="./th (1).jpeg" alt="content">
+                            <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font"></h3>
+                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Pay for assignment</h2>
+                            <p class="leading-relaxed text-base">Once you submit the order form, you will receive a
+                                quote
+                                for your assignment. You can choose to pay for your order via PayPal, debit/credit cards
+                                or
+                                net banking. Following the completion of the payment, you will get an email or text that
+                                will confirm your order.</p>
+                        </div>
+                    </div>
+                    <div class="xl:w-1/4 md:w-1/2 p-4">
+                        <div class="bg-gray-100 p-6 rounded-lg">
+                            <img class="animate-bounce h-40 rounded w-full object-cover object-center mb-6"
+                                src="./th (2).jpeg" alt="content">
+                            <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font"></h3>
+                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Receive completed solution
+                            </h2>
+                            <p class="leading-relaxed text-base">Our assignment maker experts start writing the papers
+                                as
+                                soon as the payment is done. The writers work fast to complete the task within the
+                                deadline.
+                                You will receive your assignment in your registered account prior to the submission
+                                deadline.</p>
+                        </div>
+                    </div>
+                    <div class="xl:w-1/4 md:w-1/2 p-4">
+                        <div class="bg-gray-100 p-6 rounded-lg">
+                            <img class="animate-bounce h-40 rounded w-full object-cover object-center mb-6"
+                                src="./quality.jpg" alt="content">
+                            <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font"></h3>
+                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Quality Approved</h2>
+                            <p class="leading-relaxed text-base">Visit our website and provide all the details by
+                                filling up
+                                the place order form. If you want customised assignment solutions, you can discuss your
+                                requirements with our support team.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="text-gray-600 body-font">
+            <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+                <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+                    <img class="animate-bounce object-cover object-center rounded" alt="hero" src="./group00.png">
+                </div>
+                <div
+                    class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+                    <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Project Maker
+                        <br class="hidden lg:inline-block">
+                    </h1>
+                    <p class="mb-8 leading-relaxed">Assignment Maker is a company that provides help regarding
+                        assignments,
+                        essays, theses and various other fields. One who is having trouble with any project, either a
+                        student, teacher or any other person, can trust this company regarding his work.
+
+                        There are times when one has no time for these things like when one is pursuing his study with
+                        his
+                        job and also there can be times when student are really confused regarding their project and
+                        needs
+                        help. So it is the best platform for such persons to get help and feel relaxed regarding their
+                        project as our top-class writers, teachers and professionals are here to help them.</p>
+                    <div class="flex justify-center">
+                        <button
+                            class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Get
+                            your first Project</button>
+
+                    </div>
+                </div>
+        </section>
+
+        </section>
+        <section class="text-gray-600 body-font">
+            <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+                <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+                    <img class="animate-bounce object-cover object-center rounded" alt="hero" src="./world.png">
+                </div>
+                <div
+                    class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+                    <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Worlds of Innovation
+                        <br class="hidden lg:inline-block">
+                    </h1>
+                    <p class="mb-8 leading-relaxed">The World of Innovation is where innovative thoughts merge with the
+                        desire and hope to make a better world. New technology is an ever-changing scene that offers us
+                        unpredictable answers to real-world problems. Innovation depends on interest, the ability to
+                        face
+                        challenges, and experimenting to test assumptions. In the realm of education, innovation comes
+                        in
+                        numerous forms. There are innovations in the manner education systems are organized and managed,
+                        represented by charter schools or school accountability systems.</p>
+                    <div class="flex justify-center">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="text-gray-600 body-font">
+            <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+                <div
+                    class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+                    <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900"> Time is money
+                    </h1>
+                    <p class="mb-8 leading-relaxed"> Get fast and accurate solutions to your assignment problems with
+                        our
+                        online assignment service. Time is a valuable resource, so why waste it on tedious tasks? Let
+                        our
+                        team of experts handle your assignments and receive completed solutions within minutes. Invest
+                        your
+                        time and effort into things that get the outcomes you want try our online assignment service now
+                        and see the results for yourself!</p>
+                    <div class="flex w-full md:justify-start justify-center items-end">
+                    </div>
+                    <p class="text-sm mt-2 text-gray-500 mb-8 w-full"></p>
+                    <div class="flex lg:flex-row md:flex-col">
+                    </div>
+                </div>
+                <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+                    <img class="animate-bounce object-cover object-center rounded" alt="hero" src="./time.png">
+                </div>
+            </div>
+        </section>
+        <section class="text-gray-600 body-font">
+            <div class="container px-5 py-24 mx-auto">
+                <div class="flex flex-col text-center w-full mb-20">
+                    <h2 class="text-xs text-yellow-500 tracking-widest font-medium title-font mb-1"></h2>
+                    <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Our Service</h1>
+                    <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Our company provides various services to help
+                        with
+                        your academics. Need some help
+                        in your academics, we are here to help you.</p>
+                </div>
+                <div class="flex flex-wrap">
+                    <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
+                        <h2 class="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">Online Homework Help
+                        </h2>
+                        <p class="leading-relaxed text-base mb-4">Stuck with your assignment? And need help! Simply come
+                            to
+                            us and give details about your assignment work. Our professional team will work on your
+                            assignment and give it in the proper format to you before the deadline.</p>
+                        <a class="text-blue-500 inline-flex items-center">Learn More
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
+                        <h2 class="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">Essay Writing Help</h2>
+                        <p class="leading-relaxed text-base mb-4">Have an essay writing or want to write an essay, and
+                            customize it according to your need, then we are here to help you. Just tell the details
+                            about
+                            the essay and your customized essay will be given to you before the deadline.</p>
+                        <a class="text-blue-500 inline-flex items-center">Learn More
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
+                        <h2 class="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">All Assignment Help
+                        </h2>
+                        <p class="leading-relaxed text-base mb-4">Want any type of writing service, the My Assignment
+                            Maker
+                            is a place for you. We deal with all types of writing needed by our customers, whether it be
+                            an
+                            assignment, essay, dissertation, thesis, research paper, etc.</p>
+                        <a class="text-blue-500 inline-flex items-center">Learn More
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
+                        <h2 class="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">Custom Essay Help</h2>
+                        <p class="leading-relaxed text-base mb-4">Want an assignment to be written by our professional
+                            team,
+                            but want to customize it according to you? No worries, we also provide customized
+                            assignments
+                            according to client needs.
+                        </p>
+                        <a class="text-blue-500 inline-flex items-center">Learn More
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <button
+                    class="flex mx-auto mt-16 text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg">Submit</button>
+            </div>
+        </section>
+        <div class="bg-white py-6 sm:py-8 lg:py-12">
+            <div class="mx-auto max-w-screen-xl px-4 md:px-8">
+                <h2 class="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-8 lg:text-3xl xl:mb-12">Pricing</h2>
+
+                <div class="mb-6 grid gap-6 sm:grid-cols-2 md:mb-8 lg:grid-cols-3 lg:gap-8">
+                    <!-- plan - start -->
+                    <div class="flex flex-col overflow-hidden rounded-lg border sm:mt-8">
+                        <div class="h-2 bg-pink-500"></div>
+
+                        <div class="flex flex-1 flex-col p-6 pt-8">
+                            <div class="mb-12">
+                                <div class="mb-2 text-center text-2xl font-bold text-gray-800">Silver</div>
+
+                                <p class="mb-8 px-8 text-center text-gray-500">For individuals and organizations who
+                                    want to
+                                    try our system</p>
+
+                                <div class="space-y-4">
+                                    <!-- check - start -->
+                                    <div class="flex items-center gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0" fill="none"
+                                            viewBox="0 0 16 16">
+                                            <circle cx="8" cy="8" r="8" fill="currentColor" class="text-gray-300" />
+                                            <circle cx="8" cy="8" r="3" fill="currentColor" class="text-gray-500" />
+                                        </svg>
+
+                                        <span class="text-gray-600">Limited time offers</span>
+                                    </div>
+                                    <!-- check - end -->
+
+                                    <!-- check - start -->
+                                    <div class="flex items-center gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0" fill="none"
+                                            viewBox="0 0 16 16">
+                                            <circle cx="8" cy="8" r="8" fill="currentColor" class="text-gray-300" />
+                                            <circle cx="8" cy="8" r="3" fill="currentColor" class="text-gray-500" />
+                                        </svg>
+
+                                        <span class="text-gray-600">Subscription options</span>
+                                    </div>
+                                    <!-- check - end -->
+
+                                    <!-- check - start -->
+                                    <div class="flex items-center gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0" fill="none"
+                                            viewBox="0 0 16 16">
+                                            <circle cx="8" cy="8" r="8" fill="currentColor" class="text-gray-300" />
+                                            <circle cx="8" cy="8" r="3" fill="currentColor" class="text-gray-500" />
+                                        </svg>
+
+                                        <span class="text-gray-600">200 tasks per month</span>
+                                    </div>
+                                    <!-- check - end -->
+
+                                    <!-- check - start -->
+                                    <div class="flex items-center gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0" fill="none"
+                                            viewBox="0 0 16 16">
+                                            <circle cx="8" cy="8" r="8" fill="currentColor" class="text-gray-300" />
+                                            <circle cx="8" cy="8" r="3" fill="currentColor" class="text-gray-500" />
+                                        </svg>
+
+                                        <span class="text-gray-600">Comunity support</span>
+                                    </div>
+                                    <!-- check - end -->
+                                </div>
+                            </div>
+
+                            <div class="mt-auto">
+                                <a href="#"
+                                    class="block rounded-lg bg-gray-200 px-8 py-3 text-center text-sm font-semibold text-gray-500 outline-none ring-indigo-300 transition duration-100 hover:bg-gray-300 focus-visible:ring active:text-gray-700 md:text-base">₹700
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- plan - end -->
+
+                    <!-- plan - start -->
+                    <div class="flex flex-col overflow-hidden rounded-lg border-2 border-indigo-500">
+                        <div
+                            class="bg-indigo-500 py-2 text-center text-sm font-semibold uppercase tracking-widest text-white">
+                            Popular choise</div>
+
+                        <div class="flex flex-1 flex-col p-6 pt-8">
+                            <div class="mb-12">
+                                <div class="mb-2 text-center text-2xl font-bold text-gray-800">Gold</div>
+
+                                <p class="mx-auto mb-8 px-8 text-center text-gray-500">Avanced feaures for Individuals
+                                    and
+                                    organizations</p>
+
+                                <div class="space-y-4">
+                                    <!-- check - start -->
+                                    <div class="flex items-center gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0" fill="none"
+                                            viewBox="0 0 16 16">
+                                            <circle cx="8" cy="8" r="8" fill="currentColor" class="text-gray-300" />
+                                            <circle cx="8" cy="8" r="3" fill="currentColor" class="text-gray-500" />
+                                        </svg>
+
+                                        <span class="text-gray-600">Payment option</span>
+                                    </div>
+                                    <!-- check - end -->
+
+                                    <!-- check - start -->
+                                    <div class="flex items-center gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0" fill="none"
+                                            viewBox="0 0 16 16">
+                                            <circle cx="8" cy="8" r="8" fill="currentColor" class="text-gray-300" />
+                                            <circle cx="8" cy="8" r="3" fill="currentColor" class="text-gray-500" />
+                                        </svg>
+
+                                        <span class="text-gray-600">Reviews and testimonials </span>
+                                    </div>
+                                    <!-- check - end -->
+
+                                    <!-- check - start -->
+                                    <div class="flex items-center gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0" fill="none"
+                                            viewBox="0 0 16 16">
+                                            <circle cx="8" cy="8" r="8" fill="currentColor" class="text-gray-300" />
+                                            <circle cx="8" cy="8" r="3" fill="currentColor" class="text-gray-500" />
+                                        </svg>
+
+                                        <span class="text-gray-600">Comparsion with competitors</span>
+                                    </div>
+                                    <!-- check - end -->
+
+                                    <!-- check - start -->
+                                    <div class="flex items-center gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0" fill="none"
+                                            viewBox="0 0 16 16">
+                                            <circle cx="8" cy="8" r="8" fill="currentColor" class="text-gray-300" />
+                                            <circle cx="8" cy="8" r="3" fill="currentColor" class="text-gray-500" />
+                                        </svg>
+
+                                        <span class="text-gray-600">Email support</span>
+                                    </div>
+                                    <!-- check - end -->
+
+                                    <!-- check - start -->
+                                    <div class="flex items-center gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0" fill="none"
+                                            viewBox="0 0 16 16">
+                                            <circle cx="8" cy="8" r="8" fill="currentColor" class="text-gray-300" />
+                                            <circle cx="8" cy="8" r="3" fill="currentColor" class="text-gray-500" />
+                                        </svg>
+
+                                        <span class="text-gray-600">Clear refund </span>
+                                    </div>
+                                    <!-- check - end -->
+                                </div>
+                            </div>
+
+                            <div class="mt-auto">
+                                <a href="#"
+                                    class="block rounded-lg bg-indigo-500 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-600 focus-visible:ring active:bg-indigo-700 md:text-base">₹799</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- plan - end -->
+
+                    <!-- plan - start -->
+                    <div class="flex flex-col overflow-hidden rounded-lg border lg:mt-8">
+                        <div class="h-2 bg-gray-800"></div>
+
+                        <div class="flex flex-1 flex-col p-6 pt-8">
+                            <div class="mb-12">
+                                <div class="mb-2 text-center text-2xl font-bold text-gray-800">Platinum</div>
+
+                                <p class="mx-auto mb-8 px-8 text-center text-gray-500">Maximum performace for
+                                    organisations
+                                </p>
+
+                                <div class="space-y-4">
+                                    <!-- check - start -->
+                                    <div class="flex items-center gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0" fill="none"
+                                            viewBox="0 0 16 16">
+                                            <circle cx="8" cy="8" r="8" fill="currentColor" class="text-gray-300" />
+                                            <circle cx="8" cy="8" r="3" fill="currentColor" class="text-gray-500" />
+                                        </svg>
+
+                                        <span class="text-gray-600">Clearly display the prices</span>
+                                    </div>
+                                    <!-- check - end -->
+
+                                    <!-- check - start -->
+                                    <div class="flex items-center gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0" fill="none"
+                                            viewBox="0 0 16 16">
+                                            <circle cx="8" cy="8" r="8" fill="currentColor" class="text-gray-300" />
+                                            <circle cx="8" cy="8" r="3" fill="currentColor" class="text-gray-500" />
+                                        </svg>
+
+                                        <span class="text-gray-600">Provide detailed information</span>
+                                    </div>
+                                    <!-- check - end -->
+
+                                    <!-- check - start -->
+                                    <div class="flex items-center gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0" fill="none"
+                                            viewBox="0 0 16 16">
+                                            <circle cx="8" cy="8" r="8" fill="currentColor" class="text-gray-300" />
+                                            <circle cx="8" cy="8" r="3" fill="currentColor" class="text-gray-500" />
+                                        </svg>
+
+                                        <span class="text-gray-600">Highlight value </span>
+                                    </div>
+                                    <!-- check - end -->
+
+                                    <!-- check - start -->
+                                    <div class="flex items-center gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0" fill="none"
+                                            viewBox="0 0 16 16">
+                                            <circle cx="8" cy="8" r="8" fill="currentColor" class="text-gray-300" />
+                                            <circle cx="8" cy="8" r="3" fill="currentColor" class="text-gray-500" />
+                                        </svg>
+
+                                        <span class="text-gray-600">Offer option</span>
+                                    </div>
+                                    <!-- check - end -->
+
+                                    <!-- check - start -->
+                                    <div class="flex items-center gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0" fill="none"
+                                            viewBox="0 0 16 16">
+                                            <circle cx="8" cy="8" r="8" fill="currentColor" class="text-gray-300" />
+                                            <circle cx="8" cy="8" r="3" fill="currentColor" class="text-gray-500" />
+                                        </svg>
+
+                                        <span class="text-gray-600">Be transparent</span>
+                                    </div>
+                                    <!-- check - end -->
+                                </div>
+                            </div>
+
+                            <div class="mt-auto">
+                                <a href="#"
+                                    class="block rounded-lg bg-gray-800 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-gray-700 focus-visible:ring active:bg-gray-600 md:text-base">₹999</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- plan - end -->
+                </div>
+            </div>
+        </div>
+        <section class="text-red-600 body-font">
+            <div class="container px-5 py-24 mx-auto flex flex-wrap">
+                <div class="flex relative pt-10 pb-20 sm:items-center md:w-2/3 mx-auto">
+                    <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+                        <div class="h-full w-1 bg-red-300 pointer-events-none"></div>
+                    </div>
+                    <div
+                        class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">
+                        1</div>
+                    <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+                        <div
+                            class="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" class="w-12 h-12" viewBox="0 0 24 24">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                        </div>
+                        <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                            <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">What type of assignment
+                                services
+                                do you provide</h2>
+                            <p class="leading-relaxed">Our company provide assignment services for all educational
+                                standards. We have well-qualified and native experts for almost every subject. Some of
+                                the
+                                areas where we offer assignment help are homework, writing research proposals, thesis,
+                                well-framed essays, coursework, case studies, coding assignments.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex relative pb-20 sm:items-center md:w-2/3 mx-auto">
+                    <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+                        <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                    </div>
+                    <div
+                        class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">
+                        2</div>
+                    <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+                        <div
+                            class="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" class="w-12 h-12" viewBox="0 0 24 24">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                            </svg>
+                        </div>
+                        <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                            <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Do you have a pre-define price
+                                list</h2>
+                            <p class="leading-relaxed">Our company provide assignment services for all educational
+                                standards. We have well-qualified and native experts for almost every subject. Some of
+                                the
+                                areas where we offer assignment help are homework, writing research proposals, thesis,
+                                well-framed essays, coursework, case studies, coding assignments.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex relative pb-20 sm:items-center md:w-2/3 mx-auto">
+                    <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+                        <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                    </div>
+                    <div
+                        class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">
+                        3</div>
+                    <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+                        <div
+                            class="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" class="w-12 h-12" viewBox="0 0 24 24">
+                                <circle cx="12" cy="5" r="3"></circle>
+                                <path d="M12 22V8M5 12H2a10 10 0 0020 0h-3"></path>
+                            </svg>
+                        </div>
+                        <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                            <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">What type of service you
+                                providing
+                            </h2>
+                            <p class="leading-relaxed">Our company provide assignment services for all educational
+                                standards. We have well-qualified and native experts for almost every subject. Some of
+                                the
+                                areas where we offer assignment help are homework, writing research proposals, thesis,
+                                well-framed essays, coursework, case studies, coding assignments.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex relative pb-10 sm:items-center md:w-2/3 mx-auto">
+                    <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+                        <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                    </div>
+                    <div
+                        class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">
+                        4</div>
+                    <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+                        <div
+                            class="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" class="w-12 h-12" viewBox="0 0 24 24">
+                                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
+                        <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                            <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">What type of assignments?</h2>
+                            <p class="leading-relaxed">Our company provide assignment services for all educational
+                                standards. We have well-qualified and native experts for almost every subject. Some of
+                                the
+                                areas where we offer assignment help are homework, writing research proposals, thesis,
+                                well-framed essays, coursework, case studies, coding assignments.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <div
+            class="flex items-center justify-center text-center bg-gradient-to-r from-fuchsia-500 via-red-600 to-cyan-400 w-[100%]">
+            <div class="flex flex-col items-center justify-center rounded-tr-full rounded-bl-full w-full bg-white">
+                <div class="flex flex-col p-2 m-2 w-full">
+                    <div class="text-xl md:text-3xl font-medium">Our Team</div>
+
+                    <div class="flex items-center justify-center md:flex-row flex-col space-x-4 space-y-4 p-2">
+                        <div class="flex-col px-6 py-2 shadow-xl rounded-2xl hover:scale-105 w-[90%] md:w-1/4">
+                            <div class="h-40 w-40 border-2 border-cyan-500 rounded-full overflow-hidden bg-gray-200">
+                                <img src="/HR.jpg" alt="" class="" />
+                            </div>
+
+                            <div class="text-lg font-medium text-stone-600 cursor-pointer hover:text-stone-400">
+                                Anuj Rathi
+                            </div>
+                            <div class="italic text-gray-500 text-sm">HR</div>
+                            <div class="flex my-2">
+                                <a href="#"
+                                    class="w-9 h-9 rounded-full border-cyan-500 border text-stone-500 hover:bg-cyan-500 hover:text-white mx-1 pt-1 inline-block"><i
+                                        class="fa fa-twitter"></i></a>
+                                <a href="#"
+                                    class="w-9 h-9 rounded-full border-cyan-500 border text-stone-500 hover:bg-cyan-500 hover:text-white mx-1 pt-1 inline-block"><i
+                                        class="fa fa-instagram"></i></a>
+                                <a href="#"
+                                    class="w-9 h-9 rounded-full border-cyan-500 border text-stone-500 hover:bg-cyan-500 hover:text-white mx-1 pt-1 inline-block"><i
+                                        class="fa fa-facebook"></i></a>
+                                <a href="#"
+                                    class="w-9 h-9 rounded-full border-cyan-500 border text-stone-500 hover:bg-cyan-500 hover:text-white mx-1 pt-1 inline-block"><i
+                                        class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="flex-col px-6 py-2 shadow-xl rounded-2xl hover:scale-105 w-[90%] md:w-1/4">
+                            <div class="h-40 w-40 border-2 border-cyan-500 rounded-full overflow-hidden bg-gray-200">
+                                <img src="/ceo.jpg" alt="" class="" />
+                            </div>
+
+                            <div class="text-lg font-medium text-stone-600 cursor-pointer hover:text-stone-400">
+                                Tarun Bhadana
+                            </div>
+                            <div class="italic text-gray-500 text-sm">CEO</div>
+                            <div class="flex my-2">
+                                <a href="#"
+                                    class="w-9 h-9 rounded-full border-cyan-500 border text-stone-500 hover:bg-cyan-500 hover:text-white mx-1 pt-1 inline-block"><i
+                                        class="fa fa-twitter"></i></a>
+                                <a href="#"
+                                    class="w-9 h-9 rounded-full border-cyan-500 border text-stone-500 hover:bg-cyan-500 hover:text-white mx-1 pt-1 inline-block"><i
+                                        class="fa fa-instagram"></i></a>
+                                <a href="#"
+                                    class="w-9 h-9 rounded-full border-cyan-500 border text-stone-500 hover:bg-cyan-500 hover:text-white mx-1 pt-1 inline-block"><i
+                                        class="fa fa-facebook"></i></a>
+                                <a href="#"
+                                    class="w-9 h-9 rounded-full border-cyan-500 border text-stone-500 hover:bg-cyan-500 hover:text-white mx-1 pt-1 inline-block"><i
+                                        class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="flex-col px-6 py-2 shadow-xl rounded-2xl hover:scale-105 w-[90%] md:w-1/4">
+                            <div class="h-40 w-40 border-2 border-cyan-500 rounded-full overflow-hidden bg-gray-200">
+                                <img src="founder.jpg" alt="" class="" />
+                            </div>
+
+                            <div class="text-lg font-medium text-stone-600 cursor-pointer hover:text-stone-400">
+                                Prince Baisla
+                            </div>
+                            <div class="italic text-gray-500 text-sm">Founder</div>
+                            <div class="flex my-2">
+                                <a href="#"
+                                    class="w-9 h-9 rounded-full border-cyan-500 border text-stone-500 hover:bg-cyan-500 hover:text-white mx-1 pt-1 inline-block"><i
+                                        class="fa fa-twitter"></i></a>
+                                <a href="#"
+                                    class="w-9 h-9 rounded-full border-cyan-500 border text-stone-500 hover:bg-cyan-500 hover:text-white mx-1 pt-1 inline-block"><i
+                                        class="fa fa-instagram"></i></a>
+                                <a href="#"
+                                    class="w-9 h-9 rounded-full border-cyan-500 border text-stone-500 hover:bg-cyan-500 hover:text-white mx-1 pt-1 inline-block"><i
+                                        class="fa fa-facebook"></i></a>
+                                <a href="#"
+                                    class="w-9 h-9 rounded-full border-cyan-500 border text-stone-500 hover:bg-cyan-500 hover:text-white mx-1 pt-1 inline-block"><i
+                                        class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="flex-col px-6 py-2 shadow-xl rounded-2xl hover:scale-105 w-[90%] md:w-1/4">
+                            <div class="h-40 w-40 border-2 border-cyan-500 rounded-full overflow-hidden bg-gray-200">
+                                <img src="manager.jpg" alt="" class="" />
+                            </div>
+
+                            <div class="text-lg font-medium text-stone-600 cursor-pointer hover:text-stone-400">
+                                Rishab Adhana
+                            </div>
+                            <div class="italic text-gray-500 text-sm">Manager</div>
+                            <div class="flex my-2">
+                                <a href="#"
+                                    class="w-9 h-9 rounded-full border-cyan-500 border text-stone-500 hover:bg-cyan-500 hover:text-white mx-1 pt-1 inline-block"><i
+                                        class="fa fa-twitter"></i></a>
+                                <a href="#"
+                                    class="w-9 h-9 rounded-full border-cyan-500 border text-stone-500 hover:bg-cyan-500 hover:text-white mx-1 pt-1 inline-block"><i
+                                        class="fa fa-instagram"></i></a>
+                                <a href="#"
+                                    class="w-9 h-9 rounded-full border-cyan-500 border text-stone-500 hover:bg-cyan-500 hover:text-white mx-1 pt-1 inline-block"><i
+                                        class="fa fa-facebook"></i></a>
+                                <a href="#"
+                                    class="w-9 h-9 rounded-full border-cyan-500 border text-stone-500 hover:bg-cyan-500 hover:text-white mx-1 pt-1 inline-block"><i
+                                        class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://use.fontawesome.com/03f8a0ebd4.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <script src="/a.js"></script>
+
+        <section class="body-font relative">
+            <div class="container px-5 py-24 mx-auto">
+                <div class="flex flex-col text-center w-full mb-12">
+                    <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Contact Us</h1>
+                    <p class="lg:w-2/3 mx-auto leading-relaxed text-base"></p>
+                </div>
+                <div class="lg:w-1/2 md:w-2/3 mx-auto">
+                    <div class="flex flex-wrap -m-2">
+                        <div class="p-2 w-1/2">
+                            <div class="relative">
+                                <label for="name" class="leading-7 text-sm text-gray-600">Name</label>
+                                <input type="text" id="name" name="name"
+                                    class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                            </div>
+                        </div>
+                        <div class="p-2 w-1/2">
+                            <div class="relative">
+                                <label for="email" class="leading-7 text-sm text-gray-600">Email</label>
+                                <input type="email" id="email" name="email"
+                                    class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                            </div>
+                        </div>
+                        <div class="p-2 w-full">
+                            <div class="relative">
+                                <label for="message" class="leading-7 text-sm text-gray-600">Write about few
+                                    words</label>
+                                <textarea id="message" name="message"
+                                    class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+                            </div>
+                        </div>
+                        <div class="p-2 w-full">
+                            <button
+                                class="flex mx-auto text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg">SUBMIT</button>
+                        </div>
+                        <div class="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
+                            <a class="text-blue-500"></a>
+                            <p class="leading-normal my-5">
+                                <br>
+                            </p>
+                            <span class="inline-flex">
+                                <a class="text-gray-500">
+                                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                                    </svg>
+                                </a>
+                                <a class="ml-4 text-gray-500">
+                                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path
+                                            d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                                        </path>
+                                    </svg>
+                                </a>
+                                <a class="ml-4 text-gray-500">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                                        <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                                    </svg>
+                                </a>
+                                <a class="ml-4 text-gray-500">
+                                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path
+                                            d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+
+</html>
